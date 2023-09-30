@@ -394,6 +394,9 @@
   (junction (at 147.32 102.87) (diameter 0) (color 0 0 0 0)
     (uuid 9668ca92-ed48-4ffe-a592-2a60e8f53412)
   )
+  (junction (at 147.32 115.57) (diameter 0) (color 0 0 0 0)
+    (uuid cc10d5a8-1d2b-44c2-81f9-7c580ff1dc23)
+  )
   (junction (at 111.76 110.49) (diameter 0) (color 0 0 0 0)
     (uuid fed3703f-8b02-4a02-b22f-9e959e91d4a4)
   )
@@ -408,10 +411,6 @@
   (wire (pts (xy 133.35 102.87) (xy 143.51 102.87))
     (stroke (width 0) (type default))
     (uuid 0619e55b-b4a2-4f4e-b915-0635010374bc)
-  )
-  (wire (pts (xy 139.7 115.57) (xy 147.32 115.57))
-    (stroke (width 0) (type default))
-    (uuid 1e19d25c-f4cd-411c-ad46-448ef4c09be1)
   )
   (wire (pts (xy 147.32 115.57) (xy 147.32 111.76))
     (stroke (width 0) (type default))
@@ -453,7 +452,7 @@
     (stroke (width 0) (type default))
     (uuid 7b6532c0-ce18-44b6-a9f6-255d1cff0d10)
   )
-  (wire (pts (xy 132.08 115.57) (xy 118.11 115.57))
+  (wire (pts (xy 118.11 115.57) (xy 147.32 115.57))
     (stroke (width 0) (type default))
     (uuid 7df102f3-6604-4ce8-804a-1ea494ac484f)
   )
@@ -747,6 +746,37 @@
     )
   )
 
+  (symbol (lib_id "Device:R") (at 147.32 119.38 0) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 44a0df9a-23a3-4b24-a5eb-301fc7977ad9)
+    (property "Reference" "R?" (at 151.13 120.65 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "R" (at 151.13 118.11 90)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 145.542 119.38 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 147.32 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0e7a7e09-06ed-4514-9ff8-2ab4f4cdae00))
+    (pin "2" (uuid 85205f3f-ff12-444f-96ec-e66e9b466f7c))
+    (instances
+      (project "kicad"
+        (path "/1ce81232-195d-4047-8575-458c62622b55"
+          (reference "R?") (unit 1)
+        )
+      )
+      (project "notchSecondOrderTwint"
+        (path "/333366c1-a3d2-4393-8688-1e46c1ff01f1"
+          (reference "R4") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:PWR_FLAG") (at 123.19 110.49 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 47997421-71be-45ee-8140-60160952fbff)
@@ -772,6 +802,36 @@
       (project "notchSecondOrderTwint"
         (path "/333366c1-a3d2-4393-8688-1e46c1ff01f1"
           (reference "#FLG02") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 147.32 123.19 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 51b8f02a-1276-4be0-81f9-7dec8e2c9d58)
+    (property "Reference" "#PWR?" (at 147.32 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 147.32 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "" (at 147.32 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 147.32 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2de335c1-d9c1-4910-9abf-197807e19f37))
+    (instances
+      (project "kicad"
+        (path "/1ce81232-195d-4047-8575-458c62622b55"
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "notchSecondOrderTwint"
+        (path "/333366c1-a3d2-4393-8688-1e46c1ff01f1"
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -931,37 +991,6 @@
       (project "notchSecondOrderTwint"
         (path "/333366c1-a3d2-4393-8688-1e46c1ff01f1"
           (reference "U1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 135.89 115.57 90) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid ce02459a-e9a2-4f43-912b-d19f83bb19a8)
-    (property "Reference" "R?" (at 134.62 119.38 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "R" (at 137.16 119.38 90)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 135.89 113.792 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 135.89 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8203b15a-da53-4fac-831a-d8dc310b556d))
-    (pin "2" (uuid ec875102-4f47-4cd2-8c0e-864620287e8a))
-    (instances
-      (project "kicad"
-        (path "/1ce81232-195d-4047-8575-458c62622b55"
-          (reference "R?") (unit 1)
-        )
-      )
-      (project "notchSecondOrderTwint"
-        (path "/333366c1-a3d2-4393-8688-1e46c1ff01f1"
-          (reference "R4") (unit 1)
         )
       )
     )

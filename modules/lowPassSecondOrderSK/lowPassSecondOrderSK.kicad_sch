@@ -379,6 +379,9 @@
   (junction (at 139.7 69.85) (diameter 0) (color 0 0 0 0)
     (uuid 415cae60-a5fa-4da4-8fa6-e102fef6def4)
   )
+  (junction (at 172.72 74.93) (diameter 0) (color 0 0 0 0)
+    (uuid 73372524-ce28-40b8-9dae-cad43b680b23)
+  )
   (junction (at 128.27 58.42) (diameter 0) (color 0 0 0 0)
     (uuid 74be2528-9132-43b3-b369-7d2052a5728e)
   )
@@ -399,10 +402,6 @@
   (wire (pts (xy 168.91 62.23) (xy 172.72 62.23))
     (stroke (width 0) (type default))
     (uuid 1a2a5f94-2bf5-4dc1-81d8-9e429d0e7d33)
-  )
-  (wire (pts (xy 165.1 74.93) (xy 172.72 74.93))
-    (stroke (width 0) (type default))
-    (uuid 2766cc24-987b-44f4-b6b4-ac33f1875b99)
   )
   (wire (pts (xy 148.59 82.55) (xy 168.91 82.55))
     (stroke (width 0) (type default))
@@ -464,7 +463,7 @@
     (stroke (width 0) (type default))
     (uuid 8e67be03-3661-4b50-8b76-554068170d51)
   )
-  (wire (pts (xy 157.48 74.93) (xy 143.51 74.93))
+  (wire (pts (xy 143.51 74.93) (xy 172.72 74.93))
     (stroke (width 0) (type default))
     (uuid c6315c18-2a87-4974-a191-a616dc83e885)
   )
@@ -566,7 +565,7 @@
   (symbol (lib_id "power:GND") (at 139.7 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 035bda92-9f8c-49c3-b4b2-f3243eeb7933)
-    (property "Reference" "#PWR014" (at 139.7 85.09 0)
+    (property "Reference" "#PWR01" (at 139.7 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 139.7 82.55 0)
@@ -582,7 +581,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
       (project "kicad"
@@ -596,7 +595,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 148.59 69.85 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 16b34b45-8fbb-4f30-b280-01ae44703213)
-    (property "Reference" "#FLG014" (at 146.685 69.85 0)
+    (property "Reference" "#FLG02" (at 146.685 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 143.51 69.85 0)
@@ -612,7 +611,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "#FLG014") (unit 1)
+          (reference "#FLG02") (unit 1)
         )
       )
       (project "kicad"
@@ -626,7 +625,7 @@
   (symbol (lib_id "Amplifier_Operational:TL071") (at 151.13 62.23 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1f615788-7e44-4470-94f6-51fa467e1149)
-    (property "Reference" "U6" (at 160.02 58.0391 0)
+    (property "Reference" "U1" (at 160.02 58.0391 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TL071" (at 160.02 60.5791 0)
@@ -649,7 +648,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "U6") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
       (project "kicad"
@@ -663,7 +662,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 148.59 54.61 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4738fac2-82b1-4a68-87bc-5fa0e9ebb818)
-    (property "Reference" "#FLG011" (at 146.685 54.61 0)
+    (property "Reference" "#FLG01" (at 146.685 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 143.51 54.61 0)
@@ -679,7 +678,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "#FLG011") (unit 1)
+          (reference "#FLG01") (unit 1)
         )
       )
       (project "kicad"
@@ -690,27 +689,27 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 161.29 74.93 90) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 172.72 78.74 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
-    (uuid 481e779f-7955-43f1-8c97-d6df26d5912b)
-    (property "Reference" "R14" (at 160.02 78.74 90)
+    (uuid 780d1040-43f0-4c94-88a8-e6949a0ccb1e)
+    (property "Reference" "R4" (at 176.53 80.01 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 162.56 78.74 90)
+    (property "Value" "R" (at 176.53 77.47 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 161.29 73.152 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 170.942 78.74 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 161.29 74.93 0)
+    (property "Datasheet" "~" (at 172.72 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e4e98a48-519c-4f2d-a568-3c3045fa4699))
-    (pin "2" (uuid 9a481b70-20b2-4fb0-9bf1-6a53f46f2857))
+    (pin "1" (uuid 4583ac3d-5392-46c6-aa9e-0c909d6ec7d6))
+    (pin "2" (uuid 91f9fd21-49f7-411b-994f-b5b21560196b))
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "R14") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
       (project "kicad"
@@ -724,7 +723,7 @@
   (symbol (lib_id "power:GND") (at 194.31 76.2 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 963c039d-7686-44f3-88f8-132642d4cf43)
-    (property "Reference" "#PWR011" (at 187.96 76.2 0)
+    (property "Reference" "#PWR03" (at 187.96 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 190.5 76.2 90)
@@ -740,7 +739,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
       (project "kicad"
@@ -754,7 +753,7 @@
   (symbol (lib_id "Device:R") (at 132.08 69.85 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 991bfbe7-974f-4b22-b6b3-d826c168b888)
-    (property "Reference" "R13" (at 130.81 71.12 0)
+    (property "Reference" "R2" (at 130.81 71.12 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "R" (at 133.35 71.12 0)
@@ -771,7 +770,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "R13") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
       (project "kicad"
@@ -785,7 +784,7 @@
   (symbol (lib_id "Device:R") (at 172.72 67.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9c9f75a1-08fd-44a0-9803-94d3b094749a)
-    (property "Reference" "R11" (at 175.26 66.04 0)
+    (property "Reference" "R3" (at 175.26 66.04 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "R" (at 175.26 68.58 0)
@@ -802,7 +801,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "R11") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
       (project "kicad"
@@ -816,7 +815,7 @@
   (symbol (lib_id "Connector:Conn_01x06_Pin") (at 199.39 76.2 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a4a7fd54-3c90-4b98-b4c2-7fa545c22fe1)
-    (property "Reference" "J5" (at 198.755 66.04 0)
+    (property "Reference" "J1" (at 198.755 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Conn_01x06_Pin" (at 198.755 68.58 0)
@@ -837,7 +836,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "J5") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
       (project "kicad"
@@ -851,7 +850,7 @@
   (symbol (lib_id "Device:C") (at 139.7 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bdac0f8d-772d-4f14-bfef-23c0d3384008)
-    (property "Reference" "C6" (at 135.89 72.39 90)
+    (property "Reference" "C1" (at 135.89 72.39 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "C" (at 135.89 74.93 90)
@@ -868,7 +867,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "C6") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
       (project "kicad"
@@ -882,7 +881,7 @@
   (symbol (lib_id "Device:R") (at 128.27 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid da0704e4-8b1d-4134-833d-2c5103a00211)
-    (property "Reference" "R9" (at 129.54 63.5 0)
+    (property "Reference" "R1" (at 129.54 63.5 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "R" (at 129.54 66.04 0)
@@ -899,7 +898,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "R9") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
       (project "kicad"
@@ -910,10 +909,40 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 172.72 82.55 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid f0271310-3fca-4241-afea-bf363bd752f1)
+    (property "Reference" "#PWR02" (at 172.72 88.9 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 172.72 86.36 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "" (at 172.72 82.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 172.72 82.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e9699030-0d13-4698-8882-4b248c6518d2))
+    (instances
+      (project "lowPassSecondOrderSK"
+        (path "/1abb811e-e6a2-481c-ab83-294d796176de"
+          (reference "#PWR02") (unit 1)
+        )
+      )
+      (project "kicad"
+        (path "/1ce81232-195d-4047-8575-458c62622b55"
+          (reference "#PWR?") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C") (at 144.78 82.55 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f4509b36-3bcd-4b19-af09-9bac3096aa8b)
-    (property "Reference" "C7" (at 142.24 86.36 90)
+    (property "Reference" "C2" (at 142.24 86.36 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "C" (at 144.78 86.36 90)
@@ -930,7 +959,7 @@
     (instances
       (project "lowPassSecondOrderSK"
         (path "/1abb811e-e6a2-481c-ab83-294d796176de"
-          (reference "C7") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
       (project "kicad"
